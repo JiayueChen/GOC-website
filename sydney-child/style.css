@@ -1,4 +1,4 @@
-/*
+
  Theme Name:   Sydney Child
  Theme URI:    http://example.com/sydney-child/
  Description:  Sydney Theme
@@ -165,6 +165,7 @@
 /*
 responsiveness
 */
+/*控制页面效果*/
 @media (max-width: 768px) {
 	#difference_about::before{
 		content: '';
@@ -185,4 +186,91 @@ responsiveness
 
 @media (min-width: 576px) {
 
+}
+
+
+
+
+
+
+
+
+/*.container input {
+
+	border-width: 0 0 1px 0;
+	border-bottom-color: #aaaaaa;
+	background: none;
+}
+
+.container input::placeholder {
+	font-size: 2rem;
+}
+
+
+#submit {
+	background-color:#337ab7;
+	border-color: #2e6da4; 
+	border-radius: 10px;
+	font-size: 15px;
+}*/
+
+#wpcf7-f58-p59-o1 form p label span{
+	color: red;
+}
+
+#wpcf7-f58-p59-o1 form p input[type="text"],
+#wpcf7-f58-p59-o1 form p input[type="email"],
+#wpcf7-f58-p59-o1 form p input[type="url"]{
+	padding: 0.1em 0em;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #aaaaaa;
+	outline: none;
+	margin:0px;
+	background:none;
+	font-size: 1.5em;
+}
+
+#wpcf7-f58-p59-o1 form p input[type="text"]:focus,
+#wpcf7-f58-p59-o1 form p input[type="email"]:focus,
+#wpcf7-f58-p59-o1 form p input[type="url"]:focus{
+	border-bottom: 2px solid #337ab7;
+	animation: btn-darker 300ms none ease-out;
+	-webkit-animation: btn-darker 300ms none ease-out;
+}
+
+
+#wpcf7-f58-p59-o1 form p {
+	position: relative;
+}
+#wpcf7-f58-p59-o1 form p:not(.empty) label {
+	color: #0099ff;
+}
+
+/*命名一个动态效果，可以放在animation里用*/
+@keyframes float-labels {
+	0% {opacity: 1; color: #aaa; top:40px; font-size: 1em;}
+	20% {font-size: 1em; opacity: 0;}
+	30% {top: 30px;}
+	50% {opacity: 0; font-size: 0.7em;}
+	100% {top: 20px; opacity: 1;}
+}
+
+#wpcf7-f58-p59-o1 form p label {
+	position: absolute;
+	top:20px;
+	font-size: .7em;
+	animation: float-labels 300ms none ease-out;
+	-webkit-animation: float-labels 300ms none ease-out;
+}
+#wpcf7-f58-p59-o1 form p.empty label {
+	top: 40px;
+	font-size: 1em;
+	color: grey;
+	animation: none;
+	-webkit-animation: none;
+}
+/*#wpcf7-f58-p59-o1 form p:nth-of-type(4) label{
+	position: relative;
+	top: 0px;
 }
